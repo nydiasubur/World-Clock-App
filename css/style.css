@@ -35,14 +35,14 @@ footer {
   padding: 8px;
 }
 
-.cities {
+.city {
   display: flex;
   justify-content: space-between;
   margin: 20px 0px 10px;
   border-bottom: 1px dashed grey;
 }
 
-.cities:last-child {
+.city:last-child {
   border: none;
 }
 
