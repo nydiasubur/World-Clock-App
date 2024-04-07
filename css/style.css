@@ -9,6 +9,10 @@ h1 {
   text-align: center;
   font-family: sans-serif;
 }
+h2 {
+  font-size: 30px;
+  margin: 0;
+}
 footer {
   text-align: center;
   margin: 30px;
@@ -40,10 +44,6 @@ footer {
 
 .cities:last-child {
   border: none;
-}
-h2 {
-  font-size: 30px;
-  margin: 0;
 }
 
 #city-dropdown {
