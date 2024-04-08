@@ -1,8 +1,8 @@
 body {
   background: radial-gradient(
     circle at 10% 20%,
-    rgba(216, 241, 230, 0.46) 0.1%,
-    rgba(233, 226, 226, 0.28) 90.1%
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
   );
 }
 h1 {
@@ -45,7 +45,7 @@ footer {
 .city {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px 10px 0px;
+  margin: 20px 0px;
   border-bottom: 1px dashed grey;
 }
 

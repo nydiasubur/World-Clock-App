@@ -23,6 +23,17 @@ function updateTime() {
       "h:mm:ss [<small>] A [</small>]"
     )}`;
   }
+  //hongkong
+  let hongkongDateElement = document.querySelector("#hongkong p");
+
+  if (hongkongDateElement) {
+    hongkongDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    let hongkongTime = moment().tz("Hongkong");
+    let hongkongTimeElement = document.querySelector("#hongkong .city-time");
+    hongkongTimeElement.innerHTML = `${hongkongTime.format(
+      "h:mm:ss [<small>] A [</small>]"
+    )}`;
+  }
 }
 
 function displaySelectedCityTime(event) {
