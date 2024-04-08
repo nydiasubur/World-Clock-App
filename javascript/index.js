@@ -48,7 +48,7 @@ function displaySelectedCityTime(event) {
             <div class="city-date">
                 <h2>${citySelectedFormated}</h2>
                 <p>${cityDate}</p>
-                </div>
+            </div>
             <div class="city-time">${cityTime.format(
               "h:mm:ss [<small>] A [</small>]"
             )}</div>
