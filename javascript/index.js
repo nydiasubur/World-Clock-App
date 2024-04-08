@@ -1,7 +1,7 @@
 //singapore
 function updateTime() {
   let singaporeDateElement = document.querySelector("#singapore p");
-  console.log(singaporeDateElement);
+
   if (singaporeDateElement) {
     singaporeDateElement.innerHTML = moment().format("MMMM Do YYYY");
     let singaporeTime = moment().tz("Asia/Singapore");
@@ -27,6 +27,10 @@ function updateTime() {
 
 function displaySelectedCityTime(event) {
   let citySelected = event.target.value;
+  if (citySelected === "current") {
+    citySelected = moment.tz.guess();
+  }
+  console.log(citySelected);
   let citySelectedFormated = citySelected.replace("_", " ").split("/");
 
   if (citySelectedFormated.length > 1) {
