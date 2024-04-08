@@ -53,8 +53,12 @@ function displaySelectedCityTime(event) {
               "h:mm:ss [<small>] A [</small>]"
             )}</div>
         </div>`;
+  let homepageElement = document.querySelector("#homepage");
+  homepageElement.innerHTML = `<a href="">🏠 Homepage</a>`;
 }
 updateTime();
 setInterval(updateTime, 1000);
 let cityDropdownElement = document.querySelector("#city-dropdown");
 cityDropdownElement.addEventListener("change", displaySelectedCityTime);
+let homepageElement = document.querySelector("#homepage");
+homepageElement.addEventListener("click", updateTime);
