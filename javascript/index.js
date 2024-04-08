@@ -1,8 +1,9 @@
 //singapore
 function updateTime() {
   let singaporeDateElement = document.querySelector("#singapore p");
-  singaporeDateElement.innerHTML = moment().format("MMMM Do YYYY");
+  console.log(singaporeDateElement);
   if (singaporeDateElement) {
+    singaporeDateElement.innerHTML = moment().format("MMMM Do YYYY");
     let singaporeTime = moment().tz("Asia/Singapore");
     let singaporeTimeElement = document.querySelector("#singapore .city-time");
     singaporeTimeElement.innerHTML = `${singaporeTime.format(
@@ -13,8 +14,9 @@ function updateTime() {
   //saigon
 
   let saigonDateElement = document.querySelector("#saigon p");
-  saigonDateElement.innerHTML = moment().format("MMMM Do YYYY");
+
   if (saigonDateElement) {
+    saigonDateElement.innerHTML = moment().format("MMMM Do YYYY");
     let saigonTime = moment().tz("Asia/saigon");
     let saigonTimeElement = document.querySelector("#saigon .city-time");
     saigonTimeElement.innerHTML = `${saigonTime.format(
@@ -22,8 +24,6 @@ function updateTime() {
     )}`;
   }
 }
-updateTime();
-setInterval(updateTime, 1000);
 
 function displaySelectedCityTime(event) {
   let citySelected = event.target.value;
@@ -40,7 +40,7 @@ function displaySelectedCityTime(event) {
 
   let citiesElement = document.querySelector(".cities");
   citiesElement.innerHTML = ` 
-        <div class="city" id="singapore">
+        <div class="city">
             <div class="city-date">
                 <h2>${citySelectedFormated}</h2>
                 <p>${cityDate}</p>
@@ -50,6 +50,7 @@ function displaySelectedCityTime(event) {
             )}</div>
         </div>`;
 }
-
+updateTime();
+setInterval(updateTime, 1000);
 let cityDropdownElement = document.querySelector("#city-dropdown");
 cityDropdownElement.addEventListener("change", displaySelectedCityTime);
